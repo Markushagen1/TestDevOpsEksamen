@@ -12,3 +12,10 @@ Headers: Key (Content-Type) Value (application/json)
 
 Hardkodingen av bucket navnet, er fjernet. Bruker ikke Generate_image.py, men app.py!
 
+
+Leveranse 1B)
+
+https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11801270674/job/32874193779
+
+Lenke til vellykket bygging med github actions!
+
