@@ -10,3 +10,5 @@ Headers: Key (Content-Type) Value (application/json)
 
 (Skriv nærmere etterhver)!
 
+Hardkodingen av bucket navnet, er fjernet. Bruker ikke Generate_image.py, men app.py!
+
