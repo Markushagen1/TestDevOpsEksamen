@@ -30,8 +30,8 @@ jobs:
         aws-region: eu-west-1
 
     - name: Build SAM application
-      run: sam build --template-file sam_lambda/markus-lambda-image-generator/template.yaml
+      run: sam build --template-file eksamen-2024/sam_lambda/markus-lambda-image-generator/template.yaml
 
     - name: Deploy SAM application
       run: |
-        sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name markus-lambda-image-generator --capabilities CAPABILITY_IAM
+        sam deploy --template-file eksamen-2024/sam_lambda/markus-lambda-image-generator/template.yaml --no-confirm-changeset --no-fail-on-empty-changeset --stack-name markus-lambda-image-generator --capabilities CAPABILITY_IAM
