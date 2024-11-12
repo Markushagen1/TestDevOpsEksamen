@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Lambda-funksjon for å generere AI-bilder basert på en prompt og lagre i S3.
+
+Globals:
+  Function:
+    Timeout: 30  # Justerer timeout til 30 sekunder
+    MemorySize: 256
+    LoggingConfig:
+      LogFormat: JSON
+
+Resources:
+  GenerateImageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: src/
+      Handler: app.lambda_handler  # Peker til riktig funksjon i app.py
+      Runtime: python3.8
+      Environment:
+        Variables:
+          BUCKET_NAME: "pgr301-couch-explorers" # her defineres s3 bucket navn
+          CANDIDATE_PREFIX: "36"  # Kandidatnummeret
+      Policies:         
+        - AWSLambdaBasicExecutionRole
+        - Statement:
+            Effect: Allow
+            Action:
+              - "s3:PutObject"  # Tillatelse for å skrive til S3-bucketen
+            Resource:
+              - "arn:aws:s3:::pgr301-couch-explorers/36/*"
+        - Statement:
+            Effect: Allow
+            Action:
+              - "bedrock:InvokeModel"  # Tillatelse for å kalle Bedrock-tjenesten
+            Resource: "*"
+      Events:
+        GenerateImageAPI:
+          Type: Api
+          Properties:
+            Path: /generate-image
+            Method: post
+
+Outputs:
+  GenerateImageApiUrl:
+    Description: "API Gateway endpoint URL for image generation"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/generate-image"
+
