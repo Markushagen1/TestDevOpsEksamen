@@ -34,8 +34,10 @@ jobs:
 
       - name: Terraform Plan
         if: github.ref != 'refs/heads/main'
+        working-directory: eksamen-2024/infra
         run: terraform plan
 
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
+        working-directory: eksamen-2024/infra
         run: terraform apply -auto-approve
