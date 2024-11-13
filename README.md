@@ -29,3 +29,8 @@ Vellykket kjøring av terraform:
 
 https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11822484249/job/32939630155
 
+Teste workflowen fra en annen brach, kun terrafrom plan ikke apply:
+
+https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11822624088/job/32940076529
+
+
