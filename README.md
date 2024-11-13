@@ -19,3 +19,8 @@ https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11801270674/job/3
 
 Lenke til vellykket bygging med github actions!
 
+
+Lenke til sqs kø:
+https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36
+aws sqs send-message --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36 --message-body "A red screen"
+
