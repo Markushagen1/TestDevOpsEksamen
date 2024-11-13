@@ -29,6 +29,7 @@ jobs:
           aws-region: eu-west-1
 
       - name: Initialize Terraform
+        working-directory: eksamen-2024/infra
         run: terraform init
 
       - name: Terraform Plan
