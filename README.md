@@ -44,16 +44,24 @@ docker run -e AWS_ACCESS_KEY_ID=<din-aws-access-key-id> \
 
 
 Tagge stategi: Latest; skriv mer om dette senere NB!!!!!!!!!!!!!!!
-<img width="1122" alt="Skjermbilde 2024-11-18 kl  16 09 59" src="https://github.com/user-attachments/assets/faccf87d-9cb1-480e-9841-5cc4bd187ee2">
+
+4 )
+Liten kommentar til metrics.
+For å fremprovosere en alarm burde enkelte verdier i terraform konfigurasjonen endres som feks:
+  batch size 10 -> 1
+  Visibility timeout 120 -> 60
+  Threshold for alarm -> Kan settes enda lavere enn 30
+
+Kan fremprovoseres ved:
 for i in {1..50}; do 
   aws sqs send-message \
     --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36 \
-    --message-body "A thriving middle-age trading village, version $i" \
+    --message-body "A blue flamingo, version $i" \
     --region eu-west-1
   sleep 0.2
 done
 
-Sender avgårde 50 meldinger for å sette av alarmen, og bli varslet via mail. 
+Sender avgårde 50 meldinger for å sette av alarmen, og blir varslet via mail. 
 
 Oppgave 5)
 
