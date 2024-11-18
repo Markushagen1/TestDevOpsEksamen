@@ -20,9 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Bygg Docker-image
-      working-directory: eksamen-2024/java_sqs_client
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/java-sqs-client:latest .
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/java-sqs-client:latest ./eksamen-2024/java_sqs_client
 
     - name: Push Docker-image til Docker Hub
-      working-directory: eksamen-2024/java_sqs_client
       run: docker push ${{ secrets.DOCKER_USERNAME }}/java-sqs-client:latest
