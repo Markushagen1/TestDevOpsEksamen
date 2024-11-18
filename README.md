@@ -24,6 +24,7 @@ Lenke til sqs kø:
 https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36
 
 aws sqs send-message --queue-url https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36 --message-body "A red screen"
+Filteret til bedrock modellen er svært sensitivt, så enkelte ord kan blokkere!
 
 Vellykket kjøring av terraform:
 
