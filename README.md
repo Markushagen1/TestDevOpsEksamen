@@ -34,4 +34,16 @@ Teste workflowen fra en annen brach, kun terrafrom plan ikke apply:
 
 https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11822624088/job/32940076529
 
+3b)
+https://github.com/Markushagen1/TestDevOpsEksamen/actions/runs/11891097246/job/33131140234
+docker run -e AWS_ACCESS_KEY_ID=<din-aws-access-key-id> \
+  -e AWS_SECRET_ACCESS_KEY=<din-aws-secret-access-key> \
+  -e SQS_QUEUE_URL=https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-36 \
+  markuspgr301/java-sqs-client "me on top of a pyramid"   
+  (sjekk om dette også er riktig etterpå!)
+
+
+Tagge stategi: Latest; skriv mer om dette senere NB!!!!!!!!!!!!!!!
+
+
 
