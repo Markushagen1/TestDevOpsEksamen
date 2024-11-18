@@ -45,5 +45,7 @@ docker run -e AWS_ACCESS_KEY_ID=<din-aws-access-key-id> \
 
 Tagge stategi: Latest; skriv mer om dette senere NB!!!!!!!!!!!!!!!
 
+<img width="1146" alt="Skjermbilde 2024-11-18 kl  13 24 50" src="https://github.com/user-attachments/assets/a72d440b-997d-4e6f-8aeb-a33500b311a5">
+Etter å ha deaktivert SQS triggeren til lambda funkjsonen og sendt mange meldinger, slo den over til alarm og epost ble sendt til spesifisert epostadresse fra varibles.tf
 
 
