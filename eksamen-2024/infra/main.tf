@@ -5,7 +5,7 @@ resource "aws_lambda_function" "image_generator" {
   runtime       = "python3.8"
   filename      = "${path.module}/lambda_sqs36.zip"
   role          = aws_iam_role.lambda_role.arn
-  timeout       = 30
+  timeout       = 120
   environment {
     variables = {
       BUCKET_NAME = var.bucket_name
@@ -19,7 +19,7 @@ resource "aws_lambda_function" "image_generator" {
 resource "aws_lambda_event_source_mapping" "sqs_to_lambda" {
   event_source_arn = aws_sqs_queue.image_generation_queue_36.arn
   function_name    = aws_lambda_function.image_generator.arn
-  batch_size       = 5
+  batch_size       = 10
   enabled          = true
 }
 

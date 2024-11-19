@@ -17,4 +17,12 @@ variable "lambda_timeout" {
   default     = 30
 }
 
+variable "notification_email" {
+  description = "esposten som skal motta varsler fra CloudWatch alarmen"
+  type        = string
+  default     = "markushagen18@gmail.com"
+}
+
+
+
 
