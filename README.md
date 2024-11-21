@@ -72,7 +72,7 @@ Sender avgårde 50 meldinger for å fremprovosere alarmen, og blir varslet via m
 
 Oppgave 5)
 
-1. Automatisering og kontinuerlig levering (CI/CD): Hvordan påvirker serverless-arkitektur sammenlignet med mikrotjenestearkitektur CI/CD-pipelines, automatisering, og utrullingsstrategier?
+Leveranse 1)
 
 Både mikrotjenester og serverless deler et felles mål om å forbedre fleksibiliteten og skalerbarheten til applikasjoner som ofte er svært komplekse. De deler flere likheter, men det er allikevel noen viktige forskjeller å vurdere før man tar et valg ettersom de påvirker CI/CD pipelines, automatisering og utrullingsstrategier forskjellig.
 
@@ -82,7 +82,7 @@ Ved bruk av en serverless arkitektur derimot, håndteres infrastrukturen av skyl
 
 Dersom man velger serverless kan man redusere kostnader og enklere tilpasse infrastrukturen, men det krever dog større tilpassing av utviklings og testprosesser. Mikrotjenester kan gi mer kontroll og benytter seg av etablerte praksiser, men kan dermed øke kompleksiteten og kostander. 
 
-2. Observability (overvåkning): Hvordan endres overvåkning, logging og feilsøking når man går fra mikrotjenester til en serverless arkitektur? Hvilke utfordringer er spesifikke for observability i en FaaS-arkitektur?
+Leveranse 2)
 
 Overgangen fra en mikrotjeneste arkitektur til en serverless arkitektur påvirker overvåkning, logging og feilsøking betydelig. Mens mikrotjenester legger til rette for et velkjent rammeverk for observability, introduseres utfordringer med serverless knyttet til funksjonenes kortvarige og hendelsesbaserte natur.
 
@@ -99,7 +99,7 @@ På den positive siden reduserer serverless administrasjonsarbeidet, noe som gj�
 Avslutningsvis gir mikrotjenester større kontroll over observability og er godt egnet for mer komplekse systemer som krever stabilitet og forutsigbarhet. Serverless på den andre enden, gir forenklet drift og er ideelt for applikasjoner med variabel belastning, men krever tilpasning til skyleverandørens verktøy og modeller. Når man skal velge  mellom de to, bør valget baseres på applikasjonens behov for fleksibilitet, kompleksitet og ressursstyring.
 
 
-3. Skalerbarhet og kostnadskontroll: Diskuter fordeler og ulemper med tanke på skalerbarhet, ressursutnyttelse, og kostnadsoptimalisering i en serverless kontra mikrotjenestebasert arkitektur.
+Leveranse 3)
 
 Når vi tenker på skalerbarhet, ressursutnyttelse og kostandskontroll har både mikrotjenester og serverless fordeler og ulemper. Valget mellom de to avhenger av applikasjonens spesifikke krav. Den kanskje største fordelen med serverless er den innebygde skalerbarheten. Funksjonene kan skalere opp eller ned etter etterspørsel. Dette gjør det til et godt valg for applikasjoner som får uforutsigbar trafikk. Ved lav trafikk minimeres resurssbruken og omvendt, imens man kun betaler for det man faktisk bruker. I motsatt ende krever mikrotjenester manuell konfigurasjon av skalering, for eksempel igjennom containere som kjøres i Kubernetes. Enda dette fører til bedre kontroll, innebærer dette ofte høyere faste kostnader ettersom tjenestene kjøres som "normalt" enda trafikken er lav. 
 
@@ -112,7 +112,7 @@ Kostnadskontroll er et annet aspekt ved serverless som kan by på utfordinger gr
 Vi kan si at serverless er et godt valg for hendelsesbaserte applikasjoner med varierende trafikk og et krav om lavere administrasjon, mens mikrotjenester passer bedre for applikasjoner med en jevnere trafikkflyt og et behov for god kontroll over ressursutnyttelse og ytelse. 
 
 
-4. Eierskap og ansvar: Hvordan påvirkes DevOps-teamets eierskap og ansvar for applikasjonens ytelse, pålitelighet og kostnader ved overgang til en serverless tilnærming sammenlignet med en mikrotjeneste-tilnærming?
+Leveranse 4)
 
 Ved en overgang fra mikrotjeneste tilnærming til en serverless tilnærming endres eierskap og ansvar for applikasjonens ytelse, pålitelighet og kostnader seg for DevOps-team. 
 
